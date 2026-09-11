@@ -1,7 +1,7 @@
 const http = require('http');
 
 const server = http.createServer((req, res)=> {
-    //console.log(req)
+    console.log("req")
     if(req.url === '/') {
         res.end('Welcome to our home page')
         return;
@@ -14,5 +14,7 @@ const server = http.createServer((req, res)=> {
     res.end('<h1><em>GAHBO</em>IFHOIHAGHPOH</h1>s<a href=\'/\'>Home</a>')
 })
 
-server.listen(5000)
+server.listen(5000, () => {
+    console.log('Server listening 5000')
+})
  
